@@ -3,10 +3,11 @@ jdk:
   - oraclejdk8
 install:
   - mvn install:install-file -Dfile=src/main/libwebp.jar -DgroupId=com.google.webp -DartifactId=webp -Dversion=5.0.0 -Dpackaging=jar
-script: mvn clean deploy
+script: mvn clean install
 
 deploy:
   provider: bintray
+  file: bintray.descriptor
   key:
     secure: Dgl0p36Mm9EBXHvonTqm+o+cJLclbDGK5gCpKrbVgJhqdfQLiSsUtc/Nfeur40p8cugkoTV5m7u2g6IKvTufnZiLgF6xHbdEBz/NL7RJMZAv3Giq4Z8YUfMaB8TN0N5P4WPT7NO0RGA0n8EuhweDTxGr2upROtUat7dscaDrm5PVGkePA3xcQ3R/5lxEYox/quEGxg80v0SDLVqtDPjZ5OIhVo6wNxfRoAMmWdfQK9RyYbun6dWIKX6cpfAlM7g8JZldLl2c5wDkbE43vVOOvUVQ/FcnXSl27ASRQOOijGvl+SPfkAxKZUsh/lXhVCWj+ZmQ+ui9omlcN+lOcsmaJ06Ln43bEUoiq63F5/z/OExHUkrLSSY2MPm3e/G2usojAIJsU0ejrXxGpBGeiW/LRgiwa09ZyboWc8GInNmoizBrHMJiJywEST0BiYbU+cnB/zDcfoUx4yimgzde1ttOxYTwbV1Oq17DiGyB8ePFIcjHX0wAW1TCwnTQwqHgUUHgvPygGEEKqc0MuIeuthNGO1WkzO02TP+5b7vPPPslHOMuMQyXs7cRiwn0NXuqX16//5Fdid/CAj0huIJUSuHM/PhgTRUnOMROVqdGia9IMoTUUwOOqMNDiKPKjLVFf7hqPPT9Tz53BuujIEtriaVsyHjCefiU7snzGEe5W9afh5A=
   user:
