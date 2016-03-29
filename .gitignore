@@ -1,0 +1,6 @@
+/src/test/resources/lossless.webp
+/src/test/resources/lossy1.webp
+/src/test/resources/lossy2.webp
+/src/test/resources/lossy3.webp
+/build_libwebp.txt
+/target/
