@@ -9,5 +9,6 @@ deploy:
   api_key:
     secure: V45vvYd8fWLmDfc2bm8Zzz8hlHarThyg2mTkyrnW9pHSRad6qmHryGWvL9sAVyxGwaQeJC7TicsVFH8Q7uhmdwSNl9OZ9PhzBkmGRNu0LLcO7gXKy2+HDBjAv0JlmDvL2Knzj1CXpgwTfPman/uBYV3bcozjcopcJNJxeKV+VhG4CMnEzDXtnhGTduE5aANRm+MKggr3g/ICOIxHlgEWFeWzqGG27FiQ/cNLSP0geeXXnlHrz4UQnYW3ZlFveHozRzGIxaHYkyPq0Ozc/a4eJ+5BJfPtow7A4McEMkFNEzk9scnkP/80IUr32rBhYdxMfMSDQl1+jNI60g1rmh56LF7kfpe4Gamjl/1AyOOzbrCAZzPdA4OA3+lTaRB73mTu+gxSJv1RZl225XVp2N+yBLdfZc8XjVeeYgtpKbF0jpxfTQCIcTTEFhnCrg2/WzL+Mrsw7pZZENmSPwUQVcLyjPQ+jbLOGfhqhr4Z07n7iFFukUpYrNkKVCFbyd+X0zAvsI5sLrGy4+Rxoyh2+DSIkQjXBbRqJxTxBImr3jPu7DQXqdBzL+lTM3XjAzRsVf8vjNJF1fepFMBMIPJ09+QPOO2t6asPKlzzxr5Tx6VKIZM1aaANUkgU2vFRrSJDw8xgSjAMPYOzcqz3/OMpe/h4psw0mMwbFRNsvKsjR5Il84o=
   file: target/sprd-webp-1.0.jar
+  skip_cleanup: true
   on:
     repo: spreadshirt/sprd-webp
