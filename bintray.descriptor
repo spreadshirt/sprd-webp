@@ -1,0 +1,17 @@
+{
+    "package": {
+        "name": "sprd-web",
+        "repo": "library",
+        "subject": "spreadshirt"
+    },
+
+    "version": {
+        "name": "1.0-SNAPSHOT",
+    },
+
+    "files":
+        [{
+            "includePattern": "target/*.jar" 
+        }],
+    "publish": true
+}

@@ -11,6 +11,26 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <scm>
+        <url>https://github.com/spreadshirt/sprd-webp</url>
+        <connection>scm:git:git@github.com:spreadshirt/sprd-webp.git</connection>
+        <tag>HEAD</tag>
+    </scm>    
+    
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/spreadshirt/library/</url>
+        </repository>
+    </distributionManagement>    
     
     <dependencies>
         <dependency>
