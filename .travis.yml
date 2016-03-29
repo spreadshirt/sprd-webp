@@ -1,4 +1,6 @@
 language: java
+jdk:
+  - oraclejdk8
 install:
   - mvn install:install-file -Dfile=src/main/libwebp.jar -DgroupId=com.google.webp -DartifactId=webp -Dversion=5.0.0 -Dpackaging=jar
 script: mvn clean deploy
