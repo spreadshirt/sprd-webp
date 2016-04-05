@@ -2,8 +2,11 @@ package net.sprd.image.webp;
 
 import com.google.webp.libwebp;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import java.lang.reflect.Method;
 import java.util.Iterator;
@@ -37,10 +40,16 @@ public class UsageExample {
 
         String osName = System.getProperty("os.name");
         String osArch = System.getProperty("os.arch");
+        String osVersion = System.getProperty("os.version");
 
         System.out.println("OS-NAME :" + osName);
         System.out.println("OS-ARCH :" + osArch);
+        System.out.println("OS-VERS :" + osVersion);
 
+        String distro = fromStream(Runtime.getRuntime().exec("lsb_release -i -s").getInputStream());
+        System.out.println("OS-DISTRO :" + distro);
+        
+        
         String origFileName = "src/test/resources/test.png";
         BufferedImage img = ImageIO.read(new File(origFileName));
 
@@ -66,15 +75,39 @@ public class UsageExample {
         ImageWriteParam param = writer.getDefaultWriteParam();
         WebPWriteParam writeParam = (WebPWriteParam) param;
         if (quality < 0) {
-            writeParam.setCompressionType( WebPWriteParam.LOSSLESS);
+            writeParam.setCompressionType(WebPWriteParam.LOSSLESS);
         } else {
-            writeParam.setCompressionQuality( quality);
+            writeParam.setCompressionQuality(quality);
         }
         ImageOutputStream ios = ImageIO.createImageOutputStream(new File(fileName));
         writer.setOutput(ios);
         IIOImage outimage = new IIOImage(img, null, null);
         writer.write(null, outimage, writeParam);
         return f;
+    }
+
+    public static String fromStream(InputStream in) throws IOException {
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+            StringBuilder out = new StringBuilder();
+            String newLine = System.getProperty("line.separator");
+            String line;
+            while ((line = reader.readLine()) != null) {
+                out.append(line);
+                out.append(newLine);
+            }
+            return out.toString();
+        } catch (Exception e) {
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (Exception e) {
+                }
+  
+            }
+        }
+        return "";
     }
 
 }

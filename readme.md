@@ -20,12 +20,19 @@ For more informations behind it and the required folder structure see the [readm
 The origin libwebp source includes a precompiled jar file which contains the native JNI bindings for libwebp library. 
 It is referenced in central pom.xml file of sprd-webp project as 'com.google.webp|webp'
 
-You must install this jar library into your local (or company) maven repository
-    mvn install:install-file -Dfile=libwebp.jar -DgroupId=com.google.webp -DartifactId=webp -Dversion=5.0.0 -Dpackaging=jar
+Install this jar library into your local (or company) maven repository
+
+      mvn install:install-file -Dfile=libwebp.jar -DgroupId=com.google.webp -DartifactId=webp -Dversion=5.0.0 -Dpackaging=jar
 
 
 # Testing and Examples
 
 You can find a simple example with different compression rates here:
-src/test/java/net/sprd/image/webp/UsageExample.java
+
+    src/test/java/net/sprd/image/webp/UsageExample.java
+
+# Travis-ci and releases
+
+[see](https://travis-ci.org/spreadshirt/sprd-webp)
+
 
