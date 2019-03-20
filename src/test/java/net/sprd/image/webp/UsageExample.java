@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
 import javax.imageio.stream.ImageOutputStream;
-import org.scijava.nativelib.NativeLibraryUtil;
+import org.scijava.nativelib.NativeLoader;
 
 /**
  *
@@ -28,7 +28,7 @@ public class UsageExample {
      */
     public static void main(String[] args) throws IOException {
 
-        NativeLibraryUtil.loadNativeLibrary(UsageExample.class, "webp_jni");
+        NativeLoader.loadLibrary("webp_jni");
         final int version = libwebp.WebPGetDecoderVersion();
         System.out.println("libwebp version: " + Integer.toHexString(version));
 
