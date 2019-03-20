@@ -1,8 +1,7 @@
 # sprd-webp
-sprd-webp is a java wrapper around googles libwebp for generating webp encoded images.It is based on the the great [webp 
-project of Luciad](https://bitbucket.org/luciad/webp-imageio). But it uses a newer version of 
-[googles libwebp library](https://developers.google.com/speed/webp/docs/api) (1.0.2) 
-and provides only the simple API of the google webp library. 
+sprd-webp is a java wrapper around googles libwebp for generating webp encoded images. It is inspired by [webp 
+project of Luciad](https://bitbucket.org/luciad/webp-imageio). Currently sprd-webp includes version 1.0.2 of 
+[googles libwebp library](https://developers.google.com/speed/webp/docs/api). 
 
 # Testing and Examples
 
@@ -23,7 +22,7 @@ You can find a simple example with different compression rates here:
 Use the shipped native libwebp library (1.0.2) for linux (src/main/resources/META-INF/lib) or download the latest precompiled version for your OS from
 [https://developers.google.com/speed/webp/](https://developers.google.com/speed/webp/docs/precompiled#getting_cwebp_dwebp_and_the_webp_libraries).
 and put it into the META-INF/lib folder.
-If you need a shared library (as shipped by that project) clone the repository [github mirror](https://github.com/webmproject/libwebp) 
+If you need a shared library (as shipped by that project) clone [github mirror of webm project](https://github.com/webmproject/libwebp) 
 
     cd libwebp
     make -f makefile.unix
